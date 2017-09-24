@@ -1,0 +1,11 @@
+Run through these commands:
+
+sudo mkdir -p /data/db
+sudo chmod +x+r+w /data/db/
+sudo touch /data/db/mongod.lock
+sudo chown YOUR_USER_NAME:staff /data/db
+sudo chmod +x+r+w /data/db/mongod.lock
+sudo chown YOUR_USER_NAME:staff /data/db/mongod.lock
+
+Source:
+https://stackoverflow.com/questions/7948789/mongodb-mongod-complains-that-there-is-no-data-db-folder

@@ -1,0 +1,26 @@
+ 1. Create a directory where the code will live.
+ 2. Go to that directory in the Terminal.
+ 3. $ git init
+ 4. $ git flow init
+ 5. On GitHub, create a new repository. No README, no .gitignore, and no license.
+ 6. $ git checkout master
+ 7. $ git remote add origin https://github.com/justinmpeterson/my-new-repo-name.git
+ 8. $ git push -u origin master
+ 9. $ git checkout develop
+10. $ git push -u origin develop
+11. $ git flow feature start my-new-feature-name
+12. Do whatever work you want to do. (Run "$ git status" at the command line to see changes.)
+13. $ git add .
+14. $ git commit -am "My message here."
+15. $ git flow feature publish my-new-feature-name (show the new feature on GitHub)
+16. $ git flow feature track my-new-feature-name (for other users who wish to work on this code)
+17. On GitHub, initiate a pull request but do not merge it; close it.
+18. $ git flow feature finish -F my-new-feature-name (merge feature branch with develop)
+19. $ git push (sends the changes to develop to GitHub)
+20. $ git flow release start my-new-release-name
+21. $ git flow release publish my-new-release-name
+22. $ git flow release track my-new-release-name (for other users who wish to work on this code)
+23. $ git flow release finish -Fp my-new-release-name (merge into develop and master)
+24. $ git checkout develop
+25. $ git merge master
+26. $ git push

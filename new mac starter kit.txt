@@ -1,0 +1,47 @@
+1. Install command-line tools for XCode
+
+$ xcode-select --install
+
+2. Install HomeBrew
+
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+3. Enhance ~/.bash_profile
+
+$ alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
+
+4. Install Cask
+
+$ brew install cask
+
+5. Install HomeBrew applications
+
+$ brew install git
+$ brew install git-flow
+$ brew install hub
+$ brew install irssi
+$ brew install node
+$ brew install p7zip
+$ brew install python3
+$ brew install tmux
+$ brew install todo-txt
+$ brew install vim --with-override-system-vi --with-python3
+
+6. Install Cask applications
+
+$ brew cask install atom
+$ brew cask install evernote
+$ brew cask install filezilla
+$ brew cask install firefox
+$ brew cask install google-chrome
+$ brew cask install iterm2
+$ brew cask install race-for-the-galaxy
+$ brew cask install slack
+$ brew cask install spotify
+$ brew cask install the-unarchiver
+$ brew cask install vassal
+
+7. Enhance ~/.todo.cfg
+
+export TODO_DIR="/Users/justin/Documents/todotxt"
+export TODOTXT_SORT_COMMAND='env LC_COLLATE=C sort -k 2,2 -k 1,1n'
