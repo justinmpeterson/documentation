@@ -6,15 +6,11 @@ $ xcode-select --install
 
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-3. Enhance ~/.bash_profile
-
-$ alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
-
-4. Install Cask
+3. Install Cask
 
 $ brew install cask
 
-5. Install HomeBrew applications
+4. Install HomeBrew applications
 
 $ brew install git
 $ brew install git-flow
@@ -27,7 +23,7 @@ $ brew install tmux
 $ brew install todo-txt
 $ brew install vim --with-override-system-vi --with-python3
 
-6. Install Cask applications
+5. Install Cask applications
 
 $ brew cask install atom
 $ brew cask install evernote
@@ -41,7 +37,10 @@ $ brew cask install spotify
 $ brew cask install the-unarchiver
 $ brew cask install vassal
 
-7. Enhance ~/.todo.cfg
+6. Clone my dotfiles repo
 
-export TODO_DIR="/Users/justin/Documents/todotxt"
-export TODOTXT_SORT_COMMAND='env LC_COLLATE=C sort -k 2,2 -k 1,1n'
+$ git clone https://github.com/justinmpeterson/documentation.git
+
+7. Download Vundle for plugins for vim
+
+$ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
