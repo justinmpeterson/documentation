@@ -12,21 +12,31 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-au BufRead,BufNewFile *.py set expandtab
-
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
-set tabstop=3
-set softtabstop=3
-set shiftwidth=3
 set autoindent
+
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
 
 set backspace=indent,eol,start
 
+set encoding=utf-8
 set nu
 set ruler
 
