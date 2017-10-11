@@ -44,3 +44,7 @@ $ git clone https://github.com/justinmpeterson/documentation.git
 7. Download Vundle for plugins for vim
 
 $ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+8. Do not create .DS_Store files on network shares
+
+$ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
