@@ -17,3 +17,5 @@ alias t='todo.sh -d ~/.todo.cfg -t'
 
 # Misc
 set -o vi
+
+neofetch
