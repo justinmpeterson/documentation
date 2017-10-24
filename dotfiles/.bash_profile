@@ -4,11 +4,12 @@ alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 eval "$(hub alias -s)"
 alias ll='ls -FGlAhp'
 
-# Exports
-export PS1="[\D{%a %Y%m%d}|\t][\W]$ "
-
 # Functions
 cd() { builtin cd "$@"; ll; }
+parse_git_branch()
+{
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
+}
 year() { my_year=$(date +%Y); cal $my_year; }
 todogit()
 {
@@ -31,6 +32,9 @@ svrdns() { open "cifs://jpeterson:$1@$2.nas.stats.local/$2"; }
 # TODO-TXT
 export TODOTXT_DEFAULT_ACTION=ls
 alias t='todo.sh -d ~/.todo.cfg -t'
+
+# Exports
+export PS1="[\D{%a %Y%m%d}|\t][\W]\033[32m\]\$(parse_git_branch)\033[00m\]$ "
 
 # Misc
 set -o vi
