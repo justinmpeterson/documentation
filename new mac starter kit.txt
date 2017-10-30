@@ -48,3 +48,7 @@ $ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 8. Do not create .DS_Store files on network shares
 
 $ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+
+9. Save screenshots somewhere else
+
+$ mkdir ~/Desktop/Screenshots; defaults write com.apple.screencapture location ~/Desktop/Screenshots; killall SystemUIServer
