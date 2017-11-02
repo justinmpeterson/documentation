@@ -31,6 +31,7 @@ $ brew cask install filezilla
 $ brew cask install firefox
 $ brew cask install google-chrome
 $ brew cask install iterm2
+$ brew cask install joinme
 $ brew cask install race-for-the-galaxy
 $ brew cask install slack
 $ brew cask install spotify
