@@ -19,6 +19,7 @@ $ brew install irssi
 $ brew install node
 $ brew install p7zip
 $ brew install python3
+$ brew install telnet
 $ brew install tmux
 $ brew install todo-txt
 $ brew install vim --with-override-system-vi --with-python3
