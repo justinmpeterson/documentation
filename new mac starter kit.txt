@@ -27,6 +27,7 @@ $ brew install vim --with-override-system-vi --with-python3
 5. Install Cask applications
 
 $ brew cask install atom
+$ brew cask install dropbox
 $ brew cask install evernote
 $ brew cask install filezilla
 $ brew cask install firefox
