@@ -37,6 +37,7 @@ $ brew cask install joinme
 $ brew cask install microsoft-teams
 $ brew cask install minecraft
 $ brew cask install race-for-the-galaxy
+$ brew cask install skype-for-business
 $ brew cask install slack
 $ brew cask install spotify
 $ brew cask install steam
