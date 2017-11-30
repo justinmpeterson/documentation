@@ -36,6 +36,7 @@ $ brew cask install iterm2
 $ brew cask install joinme
 $ brew cask install microsoft-teams
 $ brew cask install minecraft
+$ brew cask install onedrive
 $ brew cask install race-for-the-galaxy
 $ brew cask install skype-for-business
 $ brew cask install slack
