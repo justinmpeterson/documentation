@@ -26,7 +26,9 @@ stagerac() { open "cifs://jpeterson:$1@co-qfds-stage.nas.stats.local/co-qfds-sta
 hdrive() { open "cifs://jpeterson:$1@nas5a/jpeterson"; }
 hist() { open "cifs://jpeterson:$1@commdata$2.nas.stats.local/comm_$2_data"; }
 svr() { open "cifs://jpeterson:$1@$2"; }
+svrc() { open "cifs://jpeterson:$1@$2/c$"; }
 svrd() { open "cifs://jpeterson:$1@$2/d"; }
+svre() { open "cifs://jpeterson:$1@$2/e"; }
 svrdns() { open "cifs://jpeterson:$1@$2.nas.stats.local/$2"; }
 
 # TODO-TXT
