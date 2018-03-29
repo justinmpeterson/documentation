@@ -16,6 +16,7 @@ $ brew install git
 $ brew install git-flow
 $ brew install hub
 $ brew install irssi
+$ brew install jq
 $ brew install node
 $ brew install p7zip
 $ brew install python3
