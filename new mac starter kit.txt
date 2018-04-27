@@ -55,25 +55,36 @@ $ brew cask install the-unarchiver
 $ brew cask install vassal
 $ brew cask install visual-studio-code
 
-7. Clone my dotfiles repo
+7. Create some directories
 
-$ mkdir -p ~/Documents/code/documentation; git clone https://github.com/justinmpeterson/documentation.git ~/Documents/code/documentation
+$ mkdir ~/Desktop/Screenshots
+$ mkdir -p ~/Documents/code/documentation
+$ mkdir ~/Documents/todotxt
 
-8. Download Vundle for plugins for vim
+8. Clone my dotfiles repo
+
+$ git clone https://github.com/justinmpeterson/documentation.git ~/Documents/code/documentation
+
+9. Download Vundle for plugins for vim
 
 $ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-9. Do not create .DS_Store files on network shares
+10. Do not create .DS_Store files on network shares
 
 $ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
-10. Save screenshots somewhere else
+11. Save screenshots somewhere else
 
-$ mkdir ~/Desktop/Screenshots; defaults write com.apple.screencapture location ~/Desktop/Screenshots; killall SystemUIServer
+$ defaults write com.apple.screencapture location ~/Desktop/Screenshots; killall SystemUIServer
 
-11. Deploy some symbolic links
+12. Deploy some symbolic links
 
 $ ln -s $HOME/Documents/code/documentation/dotfiles/.bash_profile $HOME/.bash_profile
 $ ln -s $HOME/Documents/code/documentation/dotfiles/.todo.cfg $HOME/.todo.cfg
 $ ln -s $HOME/Documents/code/documentation/dotfiles/.tmux.conf $HOME/.tmux.conf
 $ ln -s $HOME/Documents/code/documentation/dotfiles/.vimrc $HOME/.vimrc
+
+13. Set up some Git config settings
+
+$ git config --global user.name "Justin Peterson"
+$ git config --global user.email "justinmpeterson@gmail.com"
