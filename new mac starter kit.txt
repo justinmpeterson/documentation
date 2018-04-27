@@ -10,7 +10,13 @@ $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/maste
 
 $ brew install cask
 
-4. Install HomeBrew applications
+4. (Optional) Grant extra permissions on the Homebrew directory
+
+$ sudo mkdir $(brew --prefix)/include
+$ sudo mkdir $(brew --prefix)/Frameworks
+$ sudo chown -R $(whoami) $(brew --prefix)/*
+
+5. Install HomeBrew applications
 
 $ brew install git
 $ brew install git-flow
@@ -19,13 +25,13 @@ $ brew install irssi
 $ brew install jq
 $ brew install node
 $ brew install p7zip
-$ brew install python3
+$ brew install python
 $ brew install telnet
 $ brew install tmux
 $ brew install todo-txt
 $ brew install vim --with-override-system-vi --with-python3
 
-5. Install Cask applications
+6. Install Cask applications
 
 $ brew cask install atom
 $ brew cask install dropbox
@@ -42,23 +48,32 @@ $ brew cask install onedrive
 $ brew cask install race-for-the-galaxy
 $ brew cask install skype-for-business
 $ brew cask install slack
+$ brew cask install sourcetree
 $ brew cask install spotify
 $ brew cask install steam
 $ brew cask install the-unarchiver
 $ brew cask install vassal
+$ brew cask install visual-studio-code
 
-6. Clone my dotfiles repo
+7. Clone my dotfiles repo
 
-$ git clone https://github.com/justinmpeterson/documentation.git
+$ mkdir -p ~/Documents/code/documentation; git clone https://github.com/justinmpeterson/documentation.git ~/Documents/code/documentation
 
-7. Download Vundle for plugins for vim
+8. Download Vundle for plugins for vim
 
 $ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-8. Do not create .DS_Store files on network shares
+9. Do not create .DS_Store files on network shares
 
 $ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
-9. Save screenshots somewhere else
+10. Save screenshots somewhere else
 
 $ mkdir ~/Desktop/Screenshots; defaults write com.apple.screencapture location ~/Desktop/Screenshots; killall SystemUIServer
+
+11. Deploy some symbolic links
+
+$ ln -s $HOME/Documents/code/documentation/dotfiles/.bash_profile $HOME/.bash_profile
+$ ln -s $HOME/Documents/code/documentation/dotfiles/.todo.cfg $HOME/.todo.cfg
+$ ln -s $HOME/Documents/code/documentation/dotfiles/.tmux.conf $HOME/.tmux.conf
+$ ln -s $HOME/Documents/code/documentation/dotfiles/.vimrc $HOME/.vimrc
