@@ -26,6 +26,7 @@ $ brew install jq
 $ brew install node
 $ brew install p7zip
 $ brew install python
+$ brew install reattach-to-user-namespace
 $ brew install telnet
 $ brew install tmux
 $ brew install todo-txt
@@ -58,33 +59,40 @@ $ brew cask install visual-studio-code
 7. Create some directories
 
 $ mkdir ~/Desktop/Screenshots
-$ mkdir -p ~/Documents/code/documentation
+$ mkdir -p ~/Documents/code/.PyEnvs
+$ mkdir ~/Documents/code/documentation
+$ mkdir ~/Documents/code/py
 $ mkdir ~/Documents/todotxt
 
-8. Clone my dotfiles repo
+8. Set up some Git config settings
+
+$ git config --global user.name "Justin Peterson"
+$ git config --global user.email "justinmpeterson@gmail.com"
+
+9. Clone my dotfiles repo
 
 $ git clone https://github.com/justinmpeterson/documentation.git ~/Documents/code/documentation
 
-9. Download Vundle for plugins for vim
+10. Download Vundle for plugins for vim
 
 $ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-10. Do not create .DS_Store files on network shares
+11. Do not create .DS_Store files on network shares
 
 $ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
-11. Save screenshots somewhere else
+12. Save screenshots somewhere else
 
 $ defaults write com.apple.screencapture location ~/Desktop/Screenshots; killall SystemUIServer
 
-12. Deploy some symbolic links
+13. Deploy some symbolic links
 
 $ ln -s $HOME/Documents/code/documentation/dotfiles/.bash_profile $HOME/.bash_profile
 $ ln -s $HOME/Documents/code/documentation/dotfiles/.todo.cfg $HOME/.todo.cfg
 $ ln -s $HOME/Documents/code/documentation/dotfiles/.tmux.conf $HOME/.tmux.conf
 $ ln -s $HOME/Documents/code/documentation/dotfiles/.vimrc $HOME/.vimrc
 
-13. Set up some Git config settings
+14. Basic Python packages
 
-$ git config --global user.name "Justin Peterson"
-$ git config --global user.email "justinmpeterson@gmail.com"
+$ pip3 install virtualenv
+$ pip3 install virtualenvwrapper

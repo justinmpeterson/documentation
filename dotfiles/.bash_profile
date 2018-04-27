@@ -23,10 +23,12 @@ export PS1="[\D{%a %Y%m%d}|\t][\W]$ "
 alias rip="python3 ~/Documents/code/py/whitechapel.py $1"
 alias riph="python3 ~/Documents/code/py/whitechapel.py --hard $1"
 export AWS_PROFILE=default
+export PROJECT_HOME=$HOME/Documents/code/py
 export ORACLE_HOME=/usr/local/opt/instantclient-basic11/
 export SQLPATH=/usr/local/opt/instantclient-basic11/sqlplus/admin/
 export TNS_ADMIN=/usr/local/opt/instantclient-basic11/network/admin/
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+export WORKON_HOME=$HOME/Documents/code/.PyEnvs
 year() { my_year=$(date +%Y); cal $my_year; }
 todogit()
 {
@@ -39,6 +41,8 @@ todogit()
   cd ~
 }
 set -o vi
+
+source /usr/local/bin/virtualenvwrapper.sh
 
 # STATS servers
 bladerac() { open "cifs://jpeterson:$1@co-qfds2.nas.stats.local/co-qfds2/db_output/commercial/xmlout"; }
