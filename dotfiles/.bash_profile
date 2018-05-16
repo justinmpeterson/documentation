@@ -22,7 +22,12 @@ cd() { builtin cd "$@"; ll; }
 export PS1="[\D{%a %Y%m%d}|\t][\W]$ "
 alias rip="python3 ~/Documents/code/py/whitechapel.py $1"
 alias riph="python3 ~/Documents/code/py/whitechapel.py --hard $1"
+<<<<<<< HEAD
 export AWS_PROFILE=zappa
+=======
+alias dnsflush="sudo killall -HUP mDNSResponder; sleep 2; echo macOS DNS Cache Reset"
+export AWS_PROFILE=default
+>>>>>>> fa6e279075aafa013c4705d52b2ddcb743acda11
 export PROJECT_HOME=$HOME/Documents/code/py
 export ORACLE_HOME=/usr/local/opt/instantclient-basic11/
 export SQLPATH=/usr/local/opt/instantclient-basic11/sqlplus/admin/
