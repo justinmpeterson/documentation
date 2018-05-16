@@ -92,7 +92,4 @@ $ ln -s $HOME/Documents/code/documentation/dotfiles/.todo.cfg $HOME/.todo.cfg
 $ ln -s $HOME/Documents/code/documentation/dotfiles/.tmux.conf $HOME/.tmux.conf
 $ ln -s $HOME/Documents/code/documentation/dotfiles/.vimrc $HOME/.vimrc
 
-14. Basic Python packages
-
-$ pip3 install virtualenv
-$ pip3 install virtualenvwrapper
+14. (Mac OS High Sierra) Uncomment the Ciphers line from /etc/ssh/ssh_config in order to be able to connect to a Synology NAS via SSH.
