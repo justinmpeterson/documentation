@@ -93,3 +93,6 @@ $ ln -s $HOME/Documents/code/documentation/dotfiles/.tmux.conf $HOME/.tmux.conf
 $ ln -s $HOME/Documents/code/documentation/dotfiles/.vimrc $HOME/.vimrc
 
 14. (Mac OS High Sierra) Uncomment the Ciphers line from /etc/ssh/ssh_config in order to be able to connect to a Synology NAS via SSH.
+
+
+/var/packages/Git/target/bin/git-shell

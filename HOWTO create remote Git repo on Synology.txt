@@ -1,0 +1,11 @@
+1. SSH to the server by logging in as Justin.
+2. $ cd /volume1/justin/code/git-repositories
+3. Create a new directory for the new repo.
+4. CD to the new directory.
+5. $ git init --bare --shared
+6. Logout.
+7. On the local machine, navigate to code root directory.
+8. $ git clone ssh://(user)@(server)/(path/to/git-repositories)/(new-remote-repo)
+9. $ git flow init
+10. Set it up in Sourcetree so you aren't just using the command line.
+11. Start coding!
