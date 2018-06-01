@@ -94,5 +94,9 @@ $ ln -s $HOME/Documents/code/documentation/dotfiles/.vimrc $HOME/.vimrc
 
 14. (Mac OS High Sierra) Uncomment the Ciphers line from /etc/ssh/ssh_config in order to be able to connect to a Synology NAS via SSH.
 
+15. Install the Node.js Security Project globally so it can be run from the CLI
+
+$ npm install -g nsp
+
 
 /var/packages/Git/target/bin/git-shell
