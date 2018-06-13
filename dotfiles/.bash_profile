@@ -1,3 +1,6 @@
+# BASH CODING TIPS
+# Running a for loop on one line
+# for i in {1..5}; do COMMAND-HERE; done
 
 # Setting PATH for Python 3.6
 # The original version is saved in .bash_profile.pysave
