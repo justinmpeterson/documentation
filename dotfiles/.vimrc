@@ -9,14 +9,17 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
+" 606
 Plugin 'gmarik/Vundle.vim'
 
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
+" 793
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vimwiki/vimwiki'
 
 " All of your Plugins must be added before the following line
+" 0163
 call vundle#end()            " required
 filetype plugin indent on    " required
 
