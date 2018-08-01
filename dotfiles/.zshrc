@@ -4,7 +4,7 @@ export TERM="xterm-256color"
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/justin/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -95,7 +95,24 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias reload="source ~/.zshrc && echo I have reloaded .zshrc for you."
-
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(history time)
+autoload -U zmv
+year() { my_year=$(date +%Y); cal $my_year; }
+alias reload="source ~/.zshrc && echo ~/.zshrc has been reloaded"
+bindkey -v
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs root_indicator)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv background_jobs history time)
+export ORACLE_HOME=/usr/local/opt/instantclient-basic11/
+export SQLPATH=/usr/local/opt/instantclient-basic11/sqlplus/admin/
+export TNS_ADMIN=/usr/local/opt/instantclient-basic11/network/admin/
+# STATS servers
+dlfiles() { open "cifs://jpeterson:$1@cm-downloads.nas.stats.local/comm_dl_downloads"; }
+dllogs() { open "cifs://jpeterson:$1@cm-downloads-iis.nas.stats.local/comm_dl_webshare/Logfiles"; }
+bladerac() { open "cifs://jpeterson:$1@co-qfds2.nas.stats.local/co-qfds2/db_output/commercial/xmlout"; }
+stagerac() { open "cifs://jpeterson:$1@co-qfds-stage.nas.stats.local/co-qfds-stage/db_output"; }
+hdrive() { open "cifs://jpeterson:$1@nas5a/jpeterson"; }
+hist() { open "cifs://jpeterson:$1@commdata$2.nas.stats.local/comm_$2_data"; }
+svr() { open "cifs://jpeterson:$1@$2"; }
+svrc() { open "cifs://jpeterson:$1@$2/c$"; }
+svrd() { open "cifs://jpeterson:$1@$2/d"; }
+svre() { open "cifs://jpeterson:$1@$2/e"; }
+svrdns() { open "cifs://jpeterson:$1@$2.nas.stats.local/$2"; }
