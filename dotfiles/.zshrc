@@ -95,6 +95,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 autoload -U zmv
 year() { my_year=$(date +%Y); cal $my_year; }
 alias reload="source ~/.zshrc && echo ~/.zshrc has been reloaded"
