@@ -95,9 +95,17 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
+# TODO.TXT stuff
+export TODOTXT_DEFAULT_ACTION=ls
+alias t='todo.sh -d ~/.todo.cfg -t'
+
 autoload -U zmv
+eventp() { echo "$1\t$2" >> ~/.calendar/calendar.personal; }
+eventpp() { echo "$1\t$2" >> ~/.calendar/calendar.personal_permanent; }
+eventw() { echo "$1\t$2" >> ~/.calendar/calendar.work; }
+eventwp() { echo "$1\t$2" >> ~/.calendar/calendar.work_permanent; }
 year() { my_year=$(date +%Y); cal $my_year; }
+alias ll='ls -FGlAhp'
 alias reload="source ~/.zshrc && echo ~/.zshrc has been reloaded"
 bindkey -v
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs root_indicator)
@@ -106,14 +114,14 @@ export ORACLE_HOME=/usr/local/opt/instantclient-basic11/
 export SQLPATH=/usr/local/opt/instantclient-basic11/sqlplus/admin/
 export TNS_ADMIN=/usr/local/opt/instantclient-basic11/network/admin/
 # STATS servers
-dlfiles() { open "cifs://jpeterson:$1@cm-downloads.nas.stats.local/comm_dl_downloads"; }
-dllogs() { open "cifs://jpeterson:$1@cm-downloads-iis.nas.stats.local/comm_dl_webshare/Logfiles"; }
-bladerac() { open "cifs://jpeterson:$1@co-qfds2.nas.stats.local/co-qfds2/db_output/commercial/xmlout"; }
-stagerac() { open "cifs://jpeterson:$1@co-qfds-stage.nas.stats.local/co-qfds-stage/db_output"; }
-hdrive() { open "cifs://jpeterson:$1@nas5a/jpeterson"; }
-hist() { open "cifs://jpeterson:$1@commdata$2.nas.stats.local/comm_$2_data"; }
-svr() { open "cifs://jpeterson:$1@$2"; }
-svrc() { open "cifs://jpeterson:$1@$2/c$"; }
-svrd() { open "cifs://jpeterson:$1@$2/d"; }
-svre() { open "cifs://jpeterson:$1@$2/e"; }
-svrdns() { open "cifs://jpeterson:$1@$2.nas.stats.local/$2"; }
+dlfiles() { open -g "cifs://jpeterson:$1@cm-downloads.nas.stats.local/comm_dl_downloads"; }
+dllogs() { open -g "cifs://jpeterson:$1@cm-downloads-iis.nas.stats.local/comm_dl_webshare/Logfiles"; }
+bladerac() { open -g "cifs://jpeterson:$1@co-qfds2.nas.stats.local/co-qfds2/db_output/commercial/xmlout"; }
+stagerac() { open -g "cifs://jpeterson:$1@co-qfds-stage.nas.stats.local/co-qfds-stage/db_output"; }
+hdrive() { open -g "cifs://jpeterson:$1@nas/user_storage$/users/jpeterson"; }
+hist() { open -g "cifs://jpeterson:$1@commdata$2.nas.stats.local/comm_$2_data"; }
+svr() { open -g "cifs://jpeterson:$1@$2"; }
+svrc() { open -g "cifs://jpeterson:$1@$2/c$"; }
+svrd() { open -g "cifs://jpeterson:$1@$2/d"; }
+svre() { open -g "cifs://jpeterson:$1@$2/e"; }
+svrdns() { open -g "cifs://jpeterson:$1@$2.nas.stats.local/$2"; }

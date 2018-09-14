@@ -1,6 +1,8 @@
 # BASH CODING TIPS
 # Running a for loop on one line
 # for i in {1..5}; do COMMAND-HERE; done
+# Creating a subdirectory named after every file in a directory, then moving each file to its subdir
+# for f in *.txt; do mkdir "${f%.*}" && mv "$f" "${f%.*}"; done
 
 # Setting PATH for Python 3.6
 # The original version is saved in .bash_profile.pysave
