@@ -1,26 +1,5 @@
 set nocompatible              " required
 filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-" 606
-Plugin 'gmarik/Vundle.vim'
-
-" Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
-" 793
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-fugitive'
-Plugin 'vimwiki/vimwiki'
-
-" All of your Plugins must be added before the following line
-" 0163
-call vundle#end()            " required
 filetype plugin indent on    " required
 
 set tabstop=2
@@ -51,4 +30,4 @@ syntax on
 set foldmethod=indent
 set foldlevel=99
 
-map <C-n> :NERDTreeToggle<CR>
+let g:vimwiki_list = [{'path': '~/Documents/vimwiki/wiki', 'path_html': '~/Documents/vimwiki/html'}]
