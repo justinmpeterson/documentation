@@ -100,6 +100,7 @@ export TODOTXT_DEFAULT_ACTION=ls
 alias t='todo.sh -d ~/.todo.cfg -t'
 
 autoload -U zmv
+alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 eventp() { echo "$1\t$2" >> ~/.calendar/calendar.personal; }
 eventpp() { echo "$1\t$2" >> ~/.calendar/calendar.personal_permanent; }
 eventw() { echo "$1\t$2" >> ~/.calendar/calendar.work; }
