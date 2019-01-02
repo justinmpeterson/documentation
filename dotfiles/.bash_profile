@@ -9,51 +9,36 @@
 # PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 # PATH=$PATH:~/Documents/todotxt:/usr/local/sbin
 # export PATH=/usr/local/bin:/usr/local/sbin:$HOME/Documents/todotxt:$PATH
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export GOPATH="${HOME}/.go"
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH=/usr/local/bin:/usr/local/sbin:/Applications/Utilities/instantclient_12_2:${GOPATH}/bin:${GOROOT}/bin:$PATH
 
 # TODO.TXT stuff
 export TODOTXT_DEFAULT_ACTION=ls
 alias t='todo.sh -d ~/.todo.cfg -t'
 
 # Generic stuff
-parse_git_branch()
-{
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
-}
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 alias ll='ls -FGlAhp'
 cd() { builtin cd "$@"; ll; }
-# export PS1="[\D{%a %Y%m%d}|\t][\W]\033[32m\]\$(parse_git_branch)\033[00m\]$ "
-export PS1="[\D{%a %Y%m%d}|\t][\W]$ "
-alias rip="python3 ~/Documents/code/py/whitechapel.py $1"
-alias riph="python3 ~/Documents/code/py/whitechapel.py --hard $1"
+export PS1="\![\D{%a %Y%m%d}|\t][\W]$ "
 alias dnsflush="sudo killall -HUP mDNSResponder; sleep 2; echo macOS DNS Cache Reset"
 export AWS_PROFILE=default
-export PROJECT_HOME=$HOME/Documents/code/py
-export ORACLE_HOME=/usr/local/opt/instantclient-basic11/
-export SQLPATH=/usr/local/opt/instantclient-basic11/sqlplus/admin/
-export TNS_ADMIN=/usr/local/opt/instantclient-basic11/network/admin/
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-export WORKON_HOME=$HOME/Documents/code/.PyEnvs
-year() { my_year=$(date +%Y); cal $my_year; }
-todogit()
-{
-  my_date=$(date +%Y%m%d)
-  t report
-  cd ~/Documents/todotxt/
-  git add .
-  git commit -am "$my_date My daily commit"
-  git push
-  cd ~
-}
+#export PROJECT_HOME=$HOME/Documents/code/py
+#export ORACLE_HOME=/usr/local/opt/instantclient-basic11/
+#export SQLPATH=/usr/local/opt/instantclient-basic11/sqlplus/admin/
+#export TNS_ADMIN=/usr/local/opt/instantclient-basic11/network/admin/
+export ORACLE_HOME=/Applications/Utilities/instantclient_12_2/
+export TNS_ADMIN=${ORACLE_HOME}network/admin/
+export ORACLE_ADMIN=${TNS_ADMIN}
 set -o vi
 
-# source /usr/local/bin/virtualenvwrapper.sh
-
 # STATS servers
+dlfiles() { open -g "cifs://jpeterson:$1@cm-downloads.nas.stats.local/comm_dl_downloads"; }
+dllogs() { open -g "cifs://jpeterson:$1@cm-downloads-iis.nas.stats.local/comm_dl_webshare/Logfiles"; }
 bladerac() { open "cifs://jpeterson:$1@co-qfds2.nas.stats.local/co-qfds2/db_output/commercial/xmlout"; }
 stagerac() { open "cifs://jpeterson:$1@co-qfds-stage.nas.stats.local/co-qfds-stage/db_output"; }
-hdrive() { open "cifs://jpeterson:$1@nas5a/jpeterson"; }
+hdrive() { open "cifs://jpeterson:$1@nas/user_storage\$/users/jpeterson"; }
 hist() { open "cifs://jpeterson:$1@commdata$2.nas.stats.local/comm_$2_data"; }
 svr() { open "cifs://jpeterson:$1@$2"; }
 svrc() { open "cifs://jpeterson:$1@$2/c$"; }
