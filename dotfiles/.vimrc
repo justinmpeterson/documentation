@@ -30,4 +30,5 @@ syntax on
 set foldmethod=indent
 set foldlevel=99
 
-let g:vimwiki_list = [{'path': '/Users/jpeterson/OneDrive\ -\ STATS\ LLC/Documents/vimwiki/wiki', 'path_html': '/Users/jpeterson/OneDrive\ -\ STATS\ LLC/Documents/vimwiki/html'}]
+" let g:vimwiki_list = [{'path': '/Users/jpeterson/OneDrive\ -\ STATS\ LLC/Documents/vimwiki/wiki', 'path_html': '/Users/jpeterson/OneDrive\ -\ STATS\ LLC/Documents/vimwiki/html'}]
+let g:vimwiki_list = [{'path': '/Users/justin/Documents/vimwiki/wiki', 'path_html': '/Users/justin/Documents/vimwiki/html'}]
